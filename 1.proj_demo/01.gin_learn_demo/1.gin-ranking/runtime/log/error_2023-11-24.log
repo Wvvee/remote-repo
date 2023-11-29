@@ -1,0 +1,52 @@
+panic error time:2023-11-24 00:44:10
+runtime error: integer divide by zero
+stacktrace from panic:goroutine 12 [running]:
+runtime/debug.Stack()
+	c:/go/src/runtime/debug/stack.go:24 +0x65
+gin-ranking/pkg/logger.Recover.func1()
+	D:/p_demo/gin-ranking/pkg/logger/logger.go:130 +0x25a
+panic({0xcdba80, 0x1064340})
+	c:/go/src/runtime/panic.go:838 +0x207
+gin-ranking/controllers.UserController.GetList({}, 0x0?)
+	D:/p_demo/gin-ranking/controllers/user.go:26 +0x11
+github.com/gin-gonic/gin.(*Context).Next(...)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+gin-ranking/pkg/logger.Recover(0xc0001d8100)
+	D:/p_demo/gin-ranking/pkg/logger/logger.go:140 +0x6b
+github.com/gin-gonic/gin.(*Context).Next(...)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0001d8100)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240 +0xe7
+github.com/gin-gonic/gin.(*Context).Next(...)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0001d8100)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102 +0x82
+github.com/gin-gonic/gin.(*Context).Next(...)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0001d8100)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240 +0xe7
+github.com/gin-gonic/gin.(*Context).Next(...)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc00039d860, 0xc0001d8100)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 +0x671
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc00039d860, {0xe0c7d0?, 0xc0005340e0}, 0xc0001d8000)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 +0x1dd
+net/http.serverHandler.ServeHTTP({0xe0ba58?}, {0xe0c7d0, 0xc0005340e0}, 0xc0001d8000)
+	c:/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00042e000, {0xe0ccf8, 0xc000088150})
+	c:/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	c:/go/src/net/http/server.go:3071 +0x4db
+
+{"level":"error","msg":"[]","mysql connect error":"sql: unknown driver \"mysql\" (forgotten import?)","time":"2023-11-24 10:28:45"}
+{"level":"error","msg":"[]","mysql connect error":"sql: unknown driver \"mysql\" (forgotten import?)","time":"2023-11-24 10:56:45"}
+{"level":"error","msg":"[]","mysql connect error":"sql: unknown driver \"mysql\" (forgotten import?)","time":"2023-11-24 11:09:08"}
+{"level":"error","msg":"[]","mysql connect error":"sql: unknown driver \"mysql\" (forgotten import?)","time":"2023-11-24 11:18:40"}
+{"level":"error","msg":"[]","mysql connect error":"sql: unknown driver \"mysql\" (forgotten import?)","time":"2023-11-24 11:27:16"}
+{"level":"error","msg":"[]","mysql connect error":"sql: unknown driver \"mysql\" (forgotten import?)","time":"2023-11-24 11:51:18"}
+{"level":"error","msg":"[]","mysql connect error":"sql: unknown driver \"mysql\" (forgotten import?)","time":"2023-11-24 11:58:51"}
+{"level":"error","msg":"[]","mysql connect error":"sql: unknown driver \"mysql\" (forgotten import?)","time":"2023-11-24 12:12:34"}
+{"level":"error","msg":"[]","mysql connect error":"sql: unknown driver \"mysql\" (forgotten import?)","time":"2023-11-24 12:24:10"}
+{"level":"error","msg":"[]","mysql connect error":"sql: unknown driver \"mysql\" (forgotten import?)","time":"2023-11-24 12:29:14"}
+{"level":"error","msg":"[]","mysql connect error":"sql: unknown driver \"mysql\" (forgotten import?)","time":"2023-11-24 12:34:10"}
+{"level":"error","msg":"[]","mysql connect error":"sql: unknown driver \"mysql\" (forgotten import?)","time":"2023-11-24 12:38:14"}

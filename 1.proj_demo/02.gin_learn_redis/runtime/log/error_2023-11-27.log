@@ -1,0 +1,51 @@
+{"level":"error","msg":"[]","mysql connect error":"dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it.","time":"2023-11-27 00:02:12"}
+{"level":"error","msg":"[]","mysql connect error":"Error 1115 (42000): Unknown character set: 'utf8mb4a'","time":"2023-11-27 14:50:21"}
+{"level":"error","msg":"[]","mysql connect error":"Error 1115 (42000): Unknown character set: 'utf8mb4a'","time":"2023-11-27 14:58:43"}
+panic error time:2023-11-27 15:42:41
+runtime error: invalid memory address or nil pointer dereference
+stacktrace from panic:goroutine 13 [running]:
+runtime/debug.Stack()
+	c:/go/src/runtime/debug/stack.go:24 +0x65
+gin-ranking/pkg/logger.Recover.func1()
+	D:/p_demo/gin-ranking/pkg/logger/logger.go:130 +0x25a
+panic({0x14c0240, 0x19c19a0})
+	c:/go/src/runtime/panic.go:838 +0x207
+github.com/gin-contrib/sessions.(*session).Session(0xc00006e0f0)
+	c:/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.5/sessions.go:132 +0x33
+github.com/gin-contrib/sessions.(*session).Set(0xc00006e0f0, {0x1496b80, 0xc000451010}, {0x1496280?, 0x1997488})
+	c:/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.5/sessions.go:88 +0x3b
+gin-ranking/controllers.UserController.Login({}, 0xc0000d9420?)
+	D:/p_demo/gin-ranking/controllers/user.go:70 +0x22e
+github.com/gin-gonic/gin.(*Context).Next(...)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-contrib/sessions.Sessions.func1(0xc0000da200)
+	c:/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.5/sessions.go:54 +0x19a
+github.com/gin-gonic/gin.(*Context).Next(...)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+gin-ranking/pkg/logger.Recover(0xc0000da200)
+	D:/p_demo/gin-ranking/pkg/logger/logger.go:140 +0x6b
+github.com/gin-gonic/gin.(*Context).Next(...)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000da200)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240 +0xe7
+github.com/gin-gonic/gin.(*Context).Next(...)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000da200)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102 +0x82
+github.com/gin-gonic/gin.(*Context).Next(...)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000da200)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240 +0xe7
+github.com/gin-gonic/gin.(*Context).Next(...)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000494ea0, 0xc0000da200)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 +0x671
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000494ea0, {0x1654918?, 0xc0001980e0}, 0xc0000da000)
+	c:/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 +0x1dd
+net/http.serverHandler.ServeHTTP({0x16534c0?}, {0x1654918, 0xc0001980e0}, 0xc0000da000)
+	c:/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003be960, {0x1654f38, 0xc000089380})
+	c:/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	c:/go/src/net/http/server.go:3071 +0x4db
+
